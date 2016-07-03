@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  ProjectAlpha
-//
-//  Created by  Borislav Prikic on 7/3/16.
-//
-//
-
 import UIKit
 
 @UIApplicationMain

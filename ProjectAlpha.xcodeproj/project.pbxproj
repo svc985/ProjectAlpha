@@ -14,6 +14,8 @@
 		1F4367D61D296F88007EA792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4367D41D296F88007EA792 /* LaunchScreen.storyboard */; };
 		1F4367E11D296F88007EA792 /* ProjectAlphaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367E01D296F88007EA792 /* ProjectAlphaTests.swift */; };
 		1F4367EC1D296F88007EA792 /* ProjectAlphaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367EB1D296F88007EA792 /* ProjectAlphaUITests.swift */; };
+		1F4367FA1D297317007EA792 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367F91D297317007EA792 /* Util.swift */; };
+		1F4368001D2989DB007EA792 /* DrawableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367FF1D2989DB007EA792 /* DrawableUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1F4367E71D296F88007EA792 /* ProjectAlphaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectAlphaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4367EB1D296F88007EA792 /* ProjectAlphaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAlphaUITests.swift; sourceTree = "<group>"; };
 		1F4367ED1D296F88007EA792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F4367F91D297317007EA792 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		1F4367FF1D2989DB007EA792 /* DrawableUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				1F4367D21D296F88007EA792 /* Assets.xcassets */,
 				1F4367D41D296F88007EA792 /* LaunchScreen.storyboard */,
 				1F4367D71D296F88007EA792 /* Info.plist */,
+				1F4367F91D297317007EA792 /* Util.swift */,
+				1F4367FF1D2989DB007EA792 /* DrawableUIView.swift */,
 			);
 			path = ProjectAlpha;
 			sourceTree = "<group>";
@@ -256,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4367CE1D296F88007EA792 /* ViewController.swift in Sources */,
+				1F4367FA1D297317007EA792 /* Util.swift in Sources */,
+				1F4368001D2989DB007EA792 /* DrawableUIView.swift in Sources */,
 				1F4367CC1D296F88007EA792 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
