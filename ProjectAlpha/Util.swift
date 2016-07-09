@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class Util {
     
@@ -7,4 +8,29 @@ class Util {
         return Int(arc4random_uniform(UInt32(maxInt)) + UInt32(minInt))
     }
     
+    class func generateRandomColor() -> UIColor{
+        let colors:[UIColor] = [UIColor.redColor(),UIColor.greenColor(),UIColor.blueColor(),UIColor.yellowColor(), UIColor.blackColor()]
+        let colorIndex = Util.randomInt(0, maxInt: colors.count)
+        return colors[colorIndex]
+    }
+
+    class func generateRandomShape() -> String{
+        var shapes:[String] = ["Triangle", "Circle", "Square", "Star"]
+        let shapeIndex = Util.randomInt(0, maxInt: shapes.count)
+        return shapes[shapeIndex]
+    }
+    
+    class func getColorNameFromRGBValues(color:UIColor) -> String {
+        let rgbColor = color.rgb()
+        print(rgbColor!)
+        
+        for (color, rgbValue) in Constants.colors {
+            if (rgbValue == rgbColor!) {
+                print(color)
+                return color
+            }
+        }
+        
+        return ""
+    }
 }

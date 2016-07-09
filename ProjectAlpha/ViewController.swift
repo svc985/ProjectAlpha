@@ -5,50 +5,43 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtWhatObjectToShow: UILabel!
     @IBOutlet weak var txtElapsedTime: UILabel!
     
-    @IBOutlet weak var firstView: UIView!
-    @IBOutlet weak var secondView: UIView!
-    @IBOutlet weak var thirdView: UIView!
-    @IBOutlet weak var fourthView: UIView!
-    
-    
-    var shapes:[String] = ["Triangle", "Circle", "Square", "Star"]
-    var colors:[String] = ["Red","Green","Blue","Yellow", "Black"]
+    @IBOutlet weak var firstView: DrawableUIView!
+    @IBOutlet weak var secondView: DrawableUIView!
+    @IBOutlet weak var thirdView: DrawableUIView!
+    @IBOutlet weak var fourthView: DrawableUIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         //get initial color + object
-        let nextItemToShow = generateRandomObject()
+        let nextColorToGuess = Util.generateRandomColor()
+        let nextItemToShow =  Util.getColorNameFromRGBValues(nextColorToGuess) + " " + Util.generateRandomShape()
         self.txtWhatObjectToShow.text = nextItemToShow
         self.txtWhatObjectToShow.adjustsFontSizeToFitWidth = true
         
-        drawRandomObjectsForAllViews()
-        
+        //generate initial set of drawings
+        generateNextSetOfDrawings()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func generateRandomObject() -> String {
-        let objectIndex = Util.randomInt(0, maxInt: shapes.count)
-        let colorIndex = Util.randomInt(0, maxInt: colors.count)
-        
-        return colors[colorIndex] + " " + shapes[objectIndex]
-    }
     
-    func drawRandomObjectsForAllViews() {
-        let firstRandomObject = generateRandomObject()
-        let secondRandomObject = generateRandomObject()
-        let thirdRandomObject = generateRandomObject()
-        let fourthRandomObject = generateRandomObject()
+    func generateNextSetOfDrawings() {
+        firstView.viewColor = Util.generateRandomColor()
+        firstView.viewShapeToDraw = Util.generateRandomShape()
         
-        print(firstRandomObject)
-        print(secondRandomObject)
-        print(thirdRandomObject)
-        print(fourthRandomObject)
+        secondView.viewColor = Util.generateRandomColor()
+        secondView.viewShapeToDraw = Util.generateRandomShape()
+        
+        thirdView.viewColor = Util.generateRandomColor()
+        thirdView.viewShapeToDraw = Util.generateRandomShape()
+        
+        fourthView.viewColor = Util.generateRandomColor()
+        fourthView.viewShapeToDraw = Util.generateRandomShape()
+
     }
 
 }
