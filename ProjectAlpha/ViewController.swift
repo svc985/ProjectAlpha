@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         //get initial color + object
         let nextColorToGuess = Util.generateRandomColor()
-        let nextItemToShow =  Util.getColorNameFromRGBValues(nextColorToGuess) + " " + Util.generateRandomShape()
+        let nextItemToShow =  Util.getColorNameFromRGBValues(nextColorToGuess) + " " + Util.generateRandomShape().rawValue
         self.txtWhatObjectToShow.text = nextItemToShow
         self.txtWhatObjectToShow.adjustsFontSizeToFitWidth = true
         

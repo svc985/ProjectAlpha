@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3A944A1D30FBA800F84F4C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A94491D30FBA800F84F4C /* Shape.swift */; };
 		1F4367CC1D296F88007EA792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367CB1D296F88007EA792 /* AppDelegate.swift */; };
 		1F4367CE1D296F88007EA792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367CD1D296F88007EA792 /* ViewController.swift */; };
 		1F4367D11D296F88007EA792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4367CF1D296F88007EA792 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F3A94491D30FBA800F84F4C /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		1F4367C81D296F88007EA792 /* ProjectAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4367CB1D296F88007EA792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4367CD1D296F88007EA792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				1F4367D71D296F88007EA792 /* Info.plist */,
 				1F4367FF1D2989DB007EA792 /* DrawableUIView.swift */,
 				1FFA63B21D304F6D00F914FC /* UIColor+RGBValue.swift */,
+				1F3A94491D30FBA800F84F4C /* Shape.swift */,
 			);
 			path = ProjectAlpha;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				1FFA63B31D304F6D00F914FC /* UIColor+RGBValue.swift in Sources */,
 				1F4367CE1D296F88007EA792 /* ViewController.swift in Sources */,
 				1F4367FA1D297317007EA792 /* Util.swift in Sources */,
+				1F3A944A1D30FBA800F84F4C /* Shape.swift in Sources */,
 				1F4368001D2989DB007EA792 /* DrawableUIView.swift in Sources */,
 				1F4367CC1D296F88007EA792 /* AppDelegate.swift in Sources */,
 				1FFA63B51D30521000F914FC /* Constants.swift in Sources */,
