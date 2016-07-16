@@ -33,30 +33,46 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-8b-ldx" customClass="DrawableUIView" customModule="ProjectAlpha" customModuleProvider="target">
                                 <rect key="frame" x="340" y="115" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="MIe-Kc-uoN"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rOq-Gy-8nu" appends="YES" id="vrA-FP-sHy"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYp-Wh-BBK" customClass="DrawableUIView" customModule="ProjectAlpha" customModuleProvider="target">
                                 <rect key="frame" x="20" y="371" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="YbP-Lc-wPi"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6Sv-gP-HCD" appends="YES" id="fPA-dR-D4I"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gc-gh-Szh" customClass="DrawableUIView" customModule="ProjectAlpha" customModuleProvider="target">
                                 <rect key="frame" x="340" y="371" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="gSA-6N-eQ0"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="up0-P9-GZ8" appends="YES" id="ai2-5z-E93"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8g-0M-ake" customClass="DrawableUIView" customModule="ProjectAlpha" customModuleProvider="target">
                                 <rect key="frame" x="20" y="115" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2a1-T9-4B0"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jWx-cB-7iD" appends="YES" id="TKc-cV-q3e"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -96,6 +112,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jWx-cB-7iD" userLabel="firstTapGestureRecognizer">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="rmR-SY-Tom"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rOq-Gy-8nu" userLabel="secondTapGestureRecognizer">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="r8Z-ba-S9I"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6Sv-gP-HCD" userLabel="thirdTapGestureRecognizer">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="Mvu-Hg-py6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="up0-P9-GZ8" userLabel="fourthTapGestureRecognizer">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="dKB-iB-yNE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140" y="227"/>
         </scene>

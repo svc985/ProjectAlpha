@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         for view in drawableViews {
             view.viewColor = Util.generateRandomColor()
             view.viewShapeToDraw = Util.generateRandomShape()
+            view.setNeedsDisplay()
         }
     }
     
@@ -55,5 +56,22 @@ class ViewController: UIViewController {
         }
         return true
     }
+    
+    @IBAction func handleTap(sender: AnyObject) {
+        
+        let clickedDrawableUIView = sender.view! as! DrawableUIView
+        if (Util.getColorNameFromRGBValues(clickedDrawableUIView.viewColor) == Util.getColorNameFromRGBValues(nextColorToGuess) && nextShapeToGuess.rawValue == clickedDrawableUIView.viewShapeToDraw.rawValue) {
+            print("success")
+            nextColorToGuess = Util.generateRandomColor()
+            nextShapeToGuess = Util.generateRandomShape()
+            generateNextSetOfDrawings()
+            generateWhatShouldBeGuessedLabel()
+        }
+        else {
+            print("wrong view clicked")
+        }
+        
+    }
+
 }
 

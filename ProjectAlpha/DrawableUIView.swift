@@ -26,36 +26,53 @@ class DrawableUIView:UIView {
      */
     override func drawRect(rect: CGRect) {
         // Drawing code
-        
-        print("DrawableUIView - what to draw:" + Util.getColorNameFromRGBValues(viewColor) + " " + viewShapeToDraw.rawValue)
+        self.clearsContextBeforeDrawing = true
         
         switch viewShapeToDraw {
-        case .Circle:
-            drawCircle()
-        case .Square:
-            drawSquare()
-        case .Cross:
-            drawCross()
-        case .Triangle:
-            drawTriangle()
+            case .Circle:
+                drawCircle()
+            case .Square:
+                drawSquare()
+            case .Cross:
+                drawCross()
+            case .Triangle:
+                drawTriangle()
         }
     }
     
     func drawCircle() {
         let viewDimens = frame.size
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: viewDimens.width / 2,y: viewDimens.height / 2), radius: CGFloat(SQUARE_SIDE_SIZE / 2), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        var startAngle: Float = Float(2 * M_PI)
+        var endAngle: Float = 0.0
         
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = circlePath.CGPath
+        // Set the radius
+        let strokeWidth = 1.0
         
-        //change the fill color
-        shapeLayer.fillColor = viewColor.CGColor
-        //you can change the stroke color
-        shapeLayer.strokeColor = viewColor.CGColor
-        //you can change the line width
-        shapeLayer.lineWidth = 3.0
+        // Get the context
+        let context = UIGraphicsGetCurrentContext()
         
-        layer.addSublayer(shapeLayer)
+        // Find the middle of the circle
+        let center = CGPointMake(viewDimens.width / 2, viewDimens.height / 2)
+        
+        // Set the stroke color
+        CGContextSetStrokeColorWithColor(context, viewColor.CGColor)
+        
+        // Set the line width
+        CGContextSetLineWidth(context, CGFloat(strokeWidth))
+        
+        // Set the fill color (if you are filling the circle)
+        CGContextSetFillColorWithColor(context, viewColor.CGColor)
+        
+        // Rotate the angles so that the inputted angles are intuitive like the clock face: the top is 0 (or 2π), the right is π/2, the bottom is π and the left is 3π/2.
+        // In essence, this appears like a unit circle rotated π/2 anti clockwise.
+        startAngle = startAngle - Float(M_PI_2)
+        endAngle = endAngle - Float(M_PI_2)
+        
+        // Draw the arc around the circle
+        CGContextAddArc(context, center.x, center.y, CGFloat(SQUARE_SIDE_SIZE / 2), CGFloat(startAngle), CGFloat(endAngle), 0)
+        
+        // Draw the arc
+        CGContextDrawPath(context, CGPathDrawingMode.EOFillStroke)
     }
 
     func drawSquare() {
