@@ -24,7 +24,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M20-ua-I5p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to show" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M20-ua-I5p">
                                 <rect key="frame" x="20" y="28" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -89,6 +89,10 @@
                         <outlet property="thirdView" destination="lYp-Wh-BBK" id="O1K-VY-BLw"/>
                         <outlet property="txtElapsedTime" destination="ikp-ry-CfK" id="LWh-s7-bdp"/>
                         <outlet property="txtWhatObjectToShow" destination="M20-ua-I5p" id="nTS-l2-fxi"/>
+                        <outletCollection property="drawableViews" destination="u8g-0M-ake" collectionClass="NSMutableArray" id="0IJ-tv-c2q"/>
+                        <outletCollection property="drawableViews" destination="Jg5-8b-ldx" collectionClass="NSMutableArray" id="wBK-la-IT6"/>
+                        <outletCollection property="drawableViews" destination="lYp-Wh-BBK" collectionClass="NSMutableArray" id="vvH-Hi-6Tr"/>
+                        <outletCollection property="drawableViews" destination="1Gc-gh-Szh" collectionClass="NSMutableArray" id="VG0-da-1N4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
