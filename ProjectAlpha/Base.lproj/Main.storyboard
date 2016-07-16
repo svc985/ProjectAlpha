@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wDE-BT-ckO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="yRe-OA-8JS">
+            <objects>
+                <viewController id="wDE-BT-ckO" customClass="HomeViewController" customModule="ProjectAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a9P-HD-acO"/>
+                        <viewControllerLayoutGuide type="bottom" id="eXZ-LH-a1F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xnl-qm-0cs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyD-iS-dlu">
+                                <rect key="frame" x="262" y="285" width="76" height="30"/>
+                                <state key="normal" title="Start game"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showGameSegue" id="urN-Xs-lj0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEW-XI-pyJ">
+                                <rect key="frame" x="495" y="28" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDf-rX-REp">
+                                <rect key="frame" x="495" y="57" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IDf-rX-REp" firstAttribute="width" secondItem="fEW-XI-pyJ" secondAttribute="width" id="1T2-Eb-aR1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fEW-XI-pyJ" secondAttribute="trailing" id="GVX-cs-qm6"/>
+                            <constraint firstItem="RyD-iS-dlu" firstAttribute="centerX" secondItem="xnl-qm-0cs" secondAttribute="centerX" id="UHb-11-rVk"/>
+                            <constraint firstItem="RyD-iS-dlu" firstAttribute="centerY" secondItem="xnl-qm-0cs" secondAttribute="centerY" id="fpa-5c-Z8D"/>
+                            <constraint firstItem="IDf-rX-REp" firstAttribute="top" secondItem="fEW-XI-pyJ" secondAttribute="bottom" constant="8" id="gzc-r9-1PX"/>
+                            <constraint firstItem="fEW-XI-pyJ" firstAttribute="top" secondItem="a9P-HD-acO" secondAttribute="bottom" constant="8" id="q0h-3k-DxZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IDf-rX-REp" secondAttribute="trailing" id="sff-4w-1x5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtbestScore" destination="IDf-rX-REp" id="nSh-WX-nNq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9h6-RM-YZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-268" y="173"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -133,7 +184,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="140" y="227"/>
+            <point key="canvasLocation" x="404" y="173"/>
         </scene>
     </scenes>
 </document>

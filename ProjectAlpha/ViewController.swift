@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController:UIViewController {
 
     @IBOutlet weak var txtWhatObjectToShow: UILabel!
     @IBOutlet weak var txtElapsedTime: UILabel!
@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     var nextColorToGuess = Util.generateRandomColor()
     var nextShapeToGuess = Util.generateRandomShape()
+    var level = 1
+    var startTime = NSDate.timeIntervalSinceReferenceDate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class ViewController: UIViewController {
         
         //get color + object to guess
         generateWhatShouldBeGuessedLabel()
+        
+        //startTime = NSDate.timeIntervalSinceReferenceDate()
     }
     
     func generateNextSetOfDrawings() {
@@ -62,15 +66,30 @@ class ViewController: UIViewController {
         let clickedDrawableUIView = sender.view! as! DrawableUIView
         if (Util.getColorNameFromRGBValues(clickedDrawableUIView.viewColor) == Util.getColorNameFromRGBValues(nextColorToGuess) && nextShapeToGuess.rawValue == clickedDrawableUIView.viewShapeToDraw.rawValue) {
             print("success")
+            
+            if(level == 3) {
+                let elapsedTime = NSDate.timeIntervalSinceReferenceDate() - startTime
+                print("elapsed time:\(elapsedTime)")
+                if (isBetterScoreAchieved(elapsedTime)) {
+                    NSUserDefaultsUtil.writeNSUserDefaultsValue(String(elapsedTime.roundToPlaces(3)))
+                }
+            }
+            
             nextColorToGuess = Util.generateRandomColor()
             nextShapeToGuess = Util.generateRandomShape()
             generateNextSetOfDrawings()
             generateWhatShouldBeGuessedLabel()
+            level += 1
         }
         else {
             print("wrong view clicked")
         }
         
+    }
+    
+    func isBetterScoreAchieved(elapsedTime:Double) -> Bool {
+        let bestScore = Double(NSUserDefaultsUtil.readNSUserDefaultsValue(NSUserDefaultsUtil.BEST_SCORE_NSDEFAULT))
+        return elapsedTime < bestScore ? true : false
     }
 
 }

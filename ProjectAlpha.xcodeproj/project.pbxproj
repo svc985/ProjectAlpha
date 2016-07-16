@@ -17,6 +17,9 @@
 		1F4367EC1D296F88007EA792 /* ProjectAlphaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367EB1D296F88007EA792 /* ProjectAlphaUITests.swift */; };
 		1F4367FA1D297317007EA792 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367F91D297317007EA792 /* Util.swift */; };
 		1F4368001D2989DB007EA792 /* DrawableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4367FF1D2989DB007EA792 /* DrawableUIView.swift */; };
+		1F56C8291D3A9EC000E9AB95 /* NSUserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F56C8281D3A9EC000E9AB95 /* NSUserDefaultsUtil.swift */; };
+		1F56C82C1D3AA01300E9AB95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F56C82B1D3AA01300E9AB95 /* HomeViewController.swift */; };
+		1F56C82E1D3AA6BF00E9AB95 /* Double+RoundToPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F56C82D1D3AA6BF00E9AB95 /* Double+RoundToPlaces.swift */; };
 		1FFA63B31D304F6D00F914FC /* UIColor+RGBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA63B21D304F6D00F914FC /* UIColor+RGBValue.swift */; };
 		1FFA63B51D30521000F914FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA63B41D30520F00F914FC /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		1F4367ED1D296F88007EA792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4367F91D297317007EA792 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1F4367FF1D2989DB007EA792 /* DrawableUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawableUIView.swift; sourceTree = "<group>"; };
+		1F56C8281D3A9EC000E9AB95 /* NSUserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsUtil.swift; sourceTree = "<group>"; };
+		1F56C82B1D3AA01300E9AB95 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F56C82D1D3AA6BF00E9AB95 /* Double+RoundToPlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+RoundToPlaces.swift"; sourceTree = "<group>"; };
 		1FFA63B21D304F6D00F914FC /* UIColor+RGBValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBValue.swift"; sourceTree = "<group>"; };
 		1FFA63B41D30520F00F914FC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +95,7 @@
 			children = (
 				1FFA63B41D30520F00F914FC /* Constants.swift */,
 				1F4367F91D297317007EA792 /* Util.swift */,
+				1F56C8281D3A9EC000E9AB95 /* NSUserDefaultsUtil.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -116,9 +123,9 @@
 		1F4367CA1D296F88007EA792 /* ProjectAlpha */ = {
 			isa = PBXGroup;
 			children = (
+				1F56C82A1D3A9FE100E9AB95 /* ViewControllers */,
 				1F3A94481D30F98500F84F4C /* Common */,
 				1F4367CB1D296F88007EA792 /* AppDelegate.swift */,
-				1F4367CD1D296F88007EA792 /* ViewController.swift */,
 				1F4367CF1D296F88007EA792 /* Main.storyboard */,
 				1F4367D21D296F88007EA792 /* Assets.xcassets */,
 				1F4367D41D296F88007EA792 /* LaunchScreen.storyboard */,
@@ -126,6 +133,7 @@
 				1F4367FF1D2989DB007EA792 /* DrawableUIView.swift */,
 				1FFA63B21D304F6D00F914FC /* UIColor+RGBValue.swift */,
 				1F3A94491D30FBA800F84F4C /* Shape.swift */,
+				1F56C82D1D3AA6BF00E9AB95 /* Double+RoundToPlaces.swift */,
 			);
 			path = ProjectAlpha;
 			sourceTree = "<group>";
@@ -146,6 +154,15 @@
 				1F4367ED1D296F88007EA792 /* Info.plist */,
 			);
 			path = ProjectAlphaUITests;
+			sourceTree = "<group>";
+		};
+		1F56C82A1D3A9FE100E9AB95 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F4367CD1D296F88007EA792 /* ViewController.swift */,
+				1F56C82B1D3AA01300E9AB95 /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFA63B31D304F6D00F914FC /* UIColor+RGBValue.swift in Sources */,
+				1F56C8291D3A9EC000E9AB95 /* NSUserDefaultsUtil.swift in Sources */,
+				1F56C82E1D3AA6BF00E9AB95 /* Double+RoundToPlaces.swift in Sources */,
 				1F4367CE1D296F88007EA792 /* ViewController.swift in Sources */,
 				1F4367FA1D297317007EA792 /* Util.swift in Sources */,
 				1F3A944A1D30FBA800F84F4C /* Shape.swift in Sources */,
+				1F56C82C1D3AA01300E9AB95 /* HomeViewController.swift in Sources */,
 				1F4368001D2989DB007EA792 /* DrawableUIView.swift in Sources */,
 				1F4367CC1D296F88007EA792 /* AppDelegate.swift in Sources */,
 				1FFA63B51D30521000F914FC /* Constants.swift in Sources */,
